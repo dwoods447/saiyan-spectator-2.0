@@ -13,6 +13,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        echo "Starting seeding of database tables.........\r\n";
+        echo "\r\nCurrently working on the : 'Series' database table .........\r\n";
+        $this->call(SeriesSeeder::class);
+        echo "\r\nFinished seeding 'Series' database table\r\n\r\n\r\n";
+        echo "Currently working on the : 'Seasons' database table.........\r\n";
+        $this->call(SeasonsSeeder::class);
+        echo "\r\nFinished seeding 'Seasons' database table\r\n\r\n\r\n";
+        echo "Currently working on the : 'Episodes' database table.........\r\n";
+        $this->call(EpisodeSeeder::class);
+        echo "\r\nFinished seeding 'Episodes' database table\r\n\r\n";
     }
 }
