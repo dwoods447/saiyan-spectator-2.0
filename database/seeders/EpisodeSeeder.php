@@ -72,12 +72,12 @@ class EpisodeSeeder extends Seeder
                         $formatted_string7 = str_replace( $pattern7, "", $formatted_string6);
                         $formatted_string8 = str_replace( $pattern8, "", $formatted_string7);
 
-                        $formatted_string9 = preg_replace_callback(
-                            $regex,
-                            function ($m) { return utfStringReplacer($m); }, // Now a Closure
-                            $formatted_string8
-                        );
-                        $final = mb_convert_encoding($formatted_string9, 'UTF-8','ISO-8859-1');
+                        // $formatted_string9 = preg_replace_callback(
+                        //     $regex,
+                        //     function ($m) { return utfStringReplacer($m); }, // Now a Closure
+                        //     $formatted_string8
+                        // );
+                        $final = mb_convert_encoding($formatted_string8, 'UTF-8','ISO-8859-1');
                         $final = mb_convert_encoding($final, 'UTF-8','Windows-1252');
                         return  $final;
                     }
