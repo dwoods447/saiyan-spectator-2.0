@@ -37,7 +37,7 @@ class EpisodeSeeder extends Seeder
         }
 
                     function escape_string_for_sql($input){
-                        $regex = <<<HEREDOC
+                        $regex =<<<HEREDOC
                         /
                          (
                             (?: [\x00-\x7F]               # single-byte sequences   0xxxxxxx
