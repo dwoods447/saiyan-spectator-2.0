@@ -37,6 +37,8 @@ class EpisodeSeeder extends Seeder
         }
 
                     function escape_string_for_sql($input){
+                        $input = str_replace("\0", "", $input);
+                        $input = filter_var($input, FILTER_UNSAFE_RAW);
                         $regex =<<<HEREDOC
                         /
                          (
@@ -60,6 +62,7 @@ class EpisodeSeeder extends Seeder
                         $pattern6 = "Ã¢â‚¬Ã´";
                         $pattern7 = "â";
                         $pattern8 = "";
+                        $regex = trim($regex);
                         $formatted_string1 = str_replace($pattern1, '', $input);
 						$formatted_string2 = str_replace( $pattern2, '-', $formatted_string1);
 						$formatted_string3 = str_replace( $pattern3, 'é', $formatted_string2);
@@ -74,8 +77,8 @@ class EpisodeSeeder extends Seeder
                             function ($m) { return utfStringReplacer($m); }, // Now a Closure
                             $formatted_string8
                         );
-
-                        $final = mb_convert_encoding($formatted_string9, 'UTF-8','Windows-1252');
+                        $final = mb_convert_encoding($formatted_string9, 'UTF-8','ISO-8859-1');
+                        $final = mb_convert_encoding($final, 'UTF-8','Windows-1252');
                         return  $final;
                     }
 
