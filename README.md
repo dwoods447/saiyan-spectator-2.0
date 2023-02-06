@@ -1,6 +1,6 @@
 
 ## About SaiyanSpectator
-Dragonball fansite built using Laravel 8  and Vue.js 3 w/Inertia
+Dragonball fansite built using Laravel 8  and Vue.js 3 w/Inertia  upagrade of an [older version](https://github.com/dwoods447/SaiyanSpecatator)
 
 ## Installation
 For Details Please refer to Laravel 8 Sail [docs](https://laravel.com/docs/8.x/sail#installing-sail-into-existing-applications)
