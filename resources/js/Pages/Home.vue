@@ -21,7 +21,7 @@
                 </div>
             </div>
             <div class="flex flex-col sm:flex-row items-center jusitfy-center m-h-[500px] mt-4">
-                <div>
+                <div class="mt-4">
                 <button
                     class="bg-amber-600 hover:text-white text-grey-darkest font-bold mx-2 py-2 px-4 rounded inline-flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -33,7 +33,7 @@
                     </button>
                </div>
 
-               <div>
+               <div class="mt-4">
                 <button
                     class="bg-amber-600 hover:text-white text-grey-darkest font-bold mx-2 py-2 px-4 rounded inline-flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
