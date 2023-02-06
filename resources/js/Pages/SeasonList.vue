@@ -42,13 +42,11 @@ function totalEpisodes(season){
 
 function firstEpisode(season){
     const episodeList = props.episodeList.filter((episode) => +episode.season_id === +season.season_id)
-    if(episodeList.length) return
     return episodeList[0].episode_number
 }
 
 function lastEpisode(season){
     const episodeList = props.episodeList.filter((episode) => +episode.season_id === +season.season_id)
-    if(episodeList.length) return
     return episodeList[episodeList.length - 1].episode_number
 }
 </script>

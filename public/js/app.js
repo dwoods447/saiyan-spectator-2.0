@@ -22584,14 +22584,12 @@ __webpack_require__.r(__webpack_exports__);
       var episodeList = props.episodeList.filter(function (episode) {
         return +episode.season_id === +season.season_id;
       });
-      if (episodeList.length) return;
       return episodeList[0].episode_number;
     }
     function lastEpisode(season) {
       var episodeList = props.episodeList.filter(function (episode) {
         return +episode.season_id === +season.season_id;
       });
-      if (episodeList.length) return;
       return episodeList[episodeList.length - 1].episode_number;
     }
     var __returned__ = {
