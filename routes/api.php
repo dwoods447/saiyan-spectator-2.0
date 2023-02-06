@@ -20,8 +20,17 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 
-// Get all episodes for a series
-Route::get('/series/{series}', [TVShowController::class, 'getEpisodesBySeries']);
+// Get all seasons for a series by shortcode
+Route::get('/seasons/{short_code}/short_code', [TVShowController::class, 'getAllSeasonsForSeriesByShortCode']);
+
+// Get all epsiodes for a season by shortcode
+Route::get('/epsiodes/all/{short_code}/season/{seasonNumber}', [TVShowController::class, 'getAllEpisodesGivenSeason']);
+
+// Get all episodes for a series by shortcode
+Route::get('/series/{short_code}/short_code', [TVShowController::class, 'getAllEpisodesForSeriesByShortCode']);
+
+// Get all episodes for a series by seasonid
+Route::get('/series/{series}/series_id', [TVShowController::class, 'getEpisodesForSeriesById']);
 
 // Get all episodes for a season
 Route::get('/series/{series}/season/{season}', [TVShowController::class, 'getEpisodesBySeason']);

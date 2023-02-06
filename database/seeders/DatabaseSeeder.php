@@ -23,5 +23,8 @@ class DatabaseSeeder extends Seeder
         echo "Currently working on the : 'Episodes' database table.........\r\n";
         $this->call(EpisodeSeeder::class);
         echo "\r\nFinished seeding 'Episodes' database table\r\n\r\n";
+        echo "\r\nCurrently working on the : 'Characters' database table\r\n\r\n";
+        $this->call(CharacterSeeder::class);
+        echo "\r\nFinished seeding 'Characters' database table\r\n\r\n";
     }
 }

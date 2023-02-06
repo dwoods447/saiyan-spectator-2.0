@@ -1,9 +1,11 @@
 <?php
-
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-
+use App\Models\Series as Series;
+use App\Models\Character as Character;
+use App\Http\Controllers\TVShowController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,13 +18,30 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
+    $seriesList = Series::all();
+    return Inertia::render('Home', [
+        'seriesList' =>  $seriesList
     ]);
 });
+
+Route::get('/series/list', function () {
+    $seriesList = Series::all();
+    return Inertia::render('PrivateVideos', [
+        'seriesList' =>  $seriesList
+    ]);
+});
+
+Route::get('/character/list', function () {
+    $characters = Character::all();
+    return Inertia::render('Characters', [
+        'characterList' =>  $characters
+    ]);
+});
+
+
+Route::get('/{show}/seasonlist', [TVShowController::class, 'getAllSeasonsForSeriesByShortCode'])->name('seasonlist');
+
+Route::get('/{short_code}/season/{season}', [TVShowController::class, 'getAllEpisodesForASeason'])->name('episodeList');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

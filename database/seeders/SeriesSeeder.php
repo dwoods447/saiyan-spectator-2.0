@@ -32,6 +32,7 @@ class SeriesSeeder extends Seeder
                 $row = [
                     "series_id" => $record[0],
                     "series_name" => $record[1],
+                    "short_code" => $record[2],
                 ];
                 echo " Inserting row : {$row_count} \r\n";
                 $recordSaved = Series::firstOrCreate($row);
@@ -44,6 +45,7 @@ class SeriesSeeder extends Seeder
                     echo "Please examine your data below: " . "\r\n\r\n\r\n";
                     echo "Series ID : {$record[0]} \r\n";
                     echo "Season Name : {$record[1]} \r\n";
+                    echo "Short Code : {$record[2]} \r\n";
                     break;
                 endif;
 

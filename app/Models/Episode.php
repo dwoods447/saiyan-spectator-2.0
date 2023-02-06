@@ -10,11 +10,11 @@ class Episode extends Model
     use HasFactory;
     
     public function seasons(){
-        return $this->belongsTo('App\Models\Season', 'season_id', 'season_id');
+        return $this->belongsTo(Season::class, 'season_id', 'season_id');
     }
 
     public function series(){
-        return $this->belongsTo('App\Models\Series', 'series_id', 'series_id');
+        return $this->belongsTo(Series::class, 'series_id', 'series_id');
     }
 
     public function errors(){
