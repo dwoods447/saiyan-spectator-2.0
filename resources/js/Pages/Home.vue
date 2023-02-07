@@ -1,21 +1,21 @@
 <template>
     <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
         <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-            <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
+            <div class="flex justify-center px-3 py-3 sm:justify-start sm:pt-0">
                 <h1 class="text-amber-600" style="font-family: saiyan_specatator;">Welcome to my Personal DragonBall Fan Site </h1>
             </div>
 
-            <div class="flex flex-col sm:flex-row">
-                <div class="w-full md:w-1/2">
+            <div class="flex flex-col sm:flex-row items-center justif-center">
+                <div class="md:w-1/2">
                     <img src="/images/splash/goku_and_vegta_splash.jpg" alt="" class="w-full">
                 </div>
-                <div class="w-full md:w-1/2 ml-4">
-                    <p>
+                <div class="md:w-1/2">
+                    <p class=" mt-3 py-2">
                         Hi, my name’s Demaria, and I’ve been a Dragon Ball fan for about 20 years now! I started watching it on Cartoon Network in the late 90s.
 
                         
                     </p>
-                    <p>
+                    <p class="mt-3 py-2">
                         I am a software engineer as my day job, so thought I’d combine two of my passions and make an application about Dragon Ball! partly to practice my coding skills. I’m by no means the most knowledgeable DB fan around the internet, but I try my best. So I hope you enjoy looking around.
                     </p>
                 </div>
